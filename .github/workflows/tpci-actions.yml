@@ -2,11 +2,15 @@ name: tpci-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened]
 jobs:
   write-readme:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - uses: actions/checkout@v6
-      - name: test declencheur
-        run: cat README.md
+      - name: Publie le README en commentaire
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr comment ${{ github.event.pull_request.number }} --body-file README.md
