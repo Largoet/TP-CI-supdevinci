@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: test declencheur
-        run: echo "le workflow fonctionne"
+        run: echo "Hello, le workflow fonctionne !"
