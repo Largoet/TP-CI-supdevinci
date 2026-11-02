@@ -1,0 +1,10 @@
+#tp2
+name: build-simeis
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: build siemis avec make
+        run: make build
