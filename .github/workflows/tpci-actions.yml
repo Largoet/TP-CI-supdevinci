@@ -1,0 +1,12 @@
+name: tpci-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  write-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: test declencheur
+        run: echo "le workflow fonctionne"
