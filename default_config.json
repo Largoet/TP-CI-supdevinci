@@ -1,0 +1,109 @@
+{
+  "server": {
+    "port": 8080,
+    "workers": 64,
+    "bind_ip": "0.0.0.0",
+    "logger_env_name": "SIMEIS_LOG",
+    "token_file": ".simeis-admin-token"
+  },
+  "game": {
+    "shards": 5,
+    "player_init_money": 100000.0,
+    "sector_size": 2000,
+    "planets_per_sector": 6,
+    "station_fplanet_dist": 220.0
+  },
+  "resources": {
+    "tier1_price": 7.5,
+    "tier2_price_mult": 2.0,
+    "tier3_price_mult": 5.3,
+    "tier4_price_mult": 8.2,
+    "tier1_volume": 2.3,
+    "tier2_volume": 1.7,
+    "tier3_volume": 1.15,
+    "tier4_volume": 0.8,
+    "fuel_price": 6.0,
+    "hull_price": 0.35,
+    "fuel_volume": 5.0,
+    "hull_volume": 0.65,
+    "tier1_difficulty": 1.9,
+    "tier2_difficulty_mult": 2.1,
+    "tier3_difficulty_mult": 5.0,
+    "tier4_difficulty_mult": 8.0,
+    "tier1_min_rank": 0,
+    "tier2_min_rank": 2,
+    "tier3_min_rank": 4,
+    "tier4_min_rank": 6
+  },
+  "industry": {
+    "simple_bprice_mult": 1.08,
+    "simple_unit_price": 8000.0,
+    "advanced_bprice_mult": 1.75,
+    "advanced_unit_price": 18000.0,
+    "simple_industry_tier1_resources_req": 1.5,
+    "simple_res2rq": 0.2,
+    "simple_res3rq": 1.25,
+    "simple_res4rq": 0.4,
+    "advanced_industry_tier1_resources_req": 7.5,
+    "advanced_res2rq": 0.4,
+    "advanced_res3rq": 0.2
+  },
+  "upgrade": {
+    "industry_unitupg_powf_div": 75.0,
+    "module_upg_powf_div": 75.0
+  },
+  "station": {
+    "cargo_base_price": 80.0,
+    "cargo_price_incdiv": 100.0,
+    "init_cargo": 10000.0
+  },
+  "ship": {
+    "fuel_tank_cap_price": 50.0,
+    "fuel_consumption_mult": 9.0,
+    "cargo_cap_price": 40.0,
+    "hull_resis_price": 8.0,
+    "reactor_rank_price": 4000.0,
+    "shield_price": 1000.0,
+    "default_pow_attr": 128,
+    "module_base_price": 4000.0,
+    "module_base_extraction_mult": 45.0,
+    "module_exrate_diff_fact": 1.3,
+    "module_exrate_fact": 0.6,
+    "module_rank_weight": 2.5,
+    "hull_usage_rate": 0.03,
+    "reactor_speed_rate": 55.0,
+    "shield_rank_log": 3.0,
+    "pilot_fuel_share": 9,
+    "pilot_rank_speed_powf": 1.0
+  },
+  "crew": {
+    "wage_rank_powf": 2.2,
+    "wage_next_rank_powf": 0.9,
+    "wage_next_rank_mult": 1100.0,
+    "base_op_wage": 0.85,
+    "pilot_wage_mult": 3.7,
+    "trader_wage_mult": 3.5,
+    "solider_wage_mult": 2.5
+  },
+  "market": {
+    "max_avg_ampl": 0.02,
+    "std_div": 1.5,
+    "change_sec": 4.0,
+    "base_fee_rate": 0.28,
+    "fee_rate_dev_powf": 0.92,
+    "upd_price_proba": 0.5,
+    "influence_max": 0.35,
+    "buy_influence_param_a": 0.012016306907210268,
+    "buy_influence_param_b": 0.6237236148551031,
+    "buy_influence_param_c": 1.5387935484111805,
+    "buy_influence_param_d": 0.083936408655154,
+    "buy_influence_param_e": 0.023142091704532564,
+    "buy_influence_param_f": 0.0341811445383504,
+    "sell_influence_param_a": 0.02578237202951275,
+    "sell_influence_param_b": 0.5554258819004403,
+    "sell_influence_param_c": 1.9919988458913422,
+    "sell_influence_param_d": 0.0018077576687068689,
+    "sell_influence_param_e": 0.010908391555243003,
+    "sell_influence_param_f": 0.002494236546541542
+  }
+}

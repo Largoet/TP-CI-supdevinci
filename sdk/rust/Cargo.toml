@@ -1,0 +1,11 @@
+[package]
+name = "simeis-sdk"
+version = "0.4.0"
+edition = "2024"
+
+[dependencies]
+
+# Nécessaire pour le fonctionnement de la SDK
+log = "*"
+serde_json = "1.0.149"
+ureq = { version = "3.3.0", default-features = false }
