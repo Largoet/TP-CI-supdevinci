@@ -1,0 +1,15 @@
+# tp3
+name: release castle
+on:
+  pull_request:
+    branches: ['release/**']
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Vérifie la branche source
+      if: github.head_ref != 'main' && !startsWith(github.head_ref, 'bug/')
+        run: |
+          echo "Pr vers release/x doit avoir pour origine main ou bug. la source acutelle est : ${{ github.head_ref }}"
+          exit 1
