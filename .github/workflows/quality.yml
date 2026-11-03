@@ -1,0 +1,14 @@
+# tp3
+name: quality
+on: [pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: check
+        run: cargo check
+      - name: clippy
+        run: cargo clippy
+      - name: format
+        run: cargo fmt --check
