@@ -1,12 +1,16 @@
 # tp3
 name: quality
-on: [pull_request]
+on:
+  pull_request:
+    # opened = création, synchronize = nouveau push, reopened = réouverture
+    types: [opened, synchronize, reopened]
 jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: install ruff
+      - name: install and format ruff
+      # ruff pour rester Rust fanbooy
         run: |
           pip install ruff
           ruff format --check tests/ 
