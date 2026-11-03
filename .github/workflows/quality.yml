@@ -2,10 +2,14 @@
 name: quality
 on: [pull_request]
 jobs:
-  build:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - name: install ruff
+        run: |
+          pip install ruff
+          ruff format --check tests/ 
       - name: check
         run: cargo check
       - name: clippy
